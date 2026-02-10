@@ -927,12 +927,12 @@ class Post_Command extends CommandWithDBObject {
 
 	private function maybe_make_child() {
 		// 50% chance of making child post.
-		return ( wp_rand( 1, 2 ) === 1 );
+		return wp_rand( 1, 2 ) === 1;
 	}
 
 	private function maybe_reset_depth() {
 		// 10% chance of resetting to root depth,
-		return ( wp_rand( 1, 10 ) === 7 );
+		return wp_rand( 1, 10 ) === 7;
 	}
 
 	/**

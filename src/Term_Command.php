@@ -795,12 +795,12 @@ class Term_Command extends WP_CLI_Command {
 
 	private function maybe_make_child() {
 		// 50% chance of making child term.
-		return ( wp_rand( 1, 2 ) === 1 );
+		return wp_rand( 1, 2 ) === 1;
 	}
 
 	private function maybe_reset_depth() {
 		// 10% chance of resetting to root depth.
-		return ( wp_rand( 1, 10 ) === 7 );
+		return wp_rand( 1, 10 ) === 7;
 	}
 
 	private function get_formatter( &$assoc_args ) {
